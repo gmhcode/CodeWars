@@ -13,4 +13,4 @@ func pyramid(_ n: Int) -> [[Int]] {
     
     return pocket
 }
-pyramid(3)
+pyramid(4)
