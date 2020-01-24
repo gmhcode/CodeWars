@@ -88,7 +88,6 @@ func evaluate(good: String, vsEvil evil: String) -> String {
     } else {
         returnString = "Battle Result: No victor on this battle field"
     }
-    zip(<#T##sequence1: Sequence##Sequence#>, <#T##sequence2: Sequence##Sequence#>)
     
     return returnString
 }
