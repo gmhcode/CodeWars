@@ -157,17 +157,29 @@ class LinkedList {
         prev?.next = current?.next
     }
     
-    func insertInOrder(){
+    func insertInOrder(value:Int){
+        guard head != nil else { return }
+        
+        if head != nil || head?.value ?? 1 >= value {
+            let newNode = Node(value: value, next: head)
+        }
+        var current = head
+        while  current?.next != nil && current?.next?.value ?? 0 < value {
+            current = current?.next
+        }
+        current?.next = Node(value: value, next: current?.next)
         
     }
-        
-    
 }
 
 let ll = LinkedList()
 ll.insert(value: 1)
 ll.insert(value: 2)
 ll.insert(value: 3)
-ll.insert(value: 4)
-ll.delete(value: 2)
+ll.insert(value: 6)
+ll.insertInOrder(value: 4)
+
+
+
+//ll.delete(value: 2)
 ll.displayListItems()
