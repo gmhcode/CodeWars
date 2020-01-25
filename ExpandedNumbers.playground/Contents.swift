@@ -28,5 +28,6 @@ func expandedForm(_ num: Int) -> String {
         remainingZeroes -= 1
     }
   return returningString
+
 }
 expandedForm(12304)
