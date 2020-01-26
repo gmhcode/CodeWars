@@ -3,19 +3,20 @@ import UIKit
 
 
 
+//expected 01001010
+//in 10000100
 func generalizedGCD(num:Int, arr:[Int]) -> Int
 {
     // WRITE YOUR CODE HERE
+    let sortedArr = arr.sorted(by: < )
     var GCD = 1
     
-    for i in arr {
-        var isDivisibleByAll = true
+    for i in sortedArr {
+        var isDivisibleByAll = false
         
-        for b in arr {
-            if b % i != 0 {
-                isDivisibleByAll = true
-                
-            }
+        for b in sortedArr {
+            isDivisibleByAll = b % i == 0 ? true : false
+            if !isDivisibleByAll { break }
         }
         if isDivisibleByAll == true {
             GCD = i
