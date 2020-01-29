@@ -170,16 +170,57 @@ class LinkedList {
         current?.next = Node(value: value, next: current?.next)
         
     }
+    
+    
 }
 
+func printList(head: Node?) {
+    print("Printing out list of nodes")
+    var currentNode = head
+    while currentNode != nil {
+        print(currentNode?.value ?? -1)
+        currentNode = currentNode?.next
+    }
+}
+
+
+func reverseList(head: Node?) -> Node? {
+    var currentNode = head
+    var prev: Node?
+    var next: Node?
+    
+    while currentNode != nil {
+        next = currentNode?.next
+        currentNode?.next = prev
+        prev = currentNode
+        
+        
+        currentNode = next
+    }
+    return prev
+}
+
+
 let ll = LinkedList()
-ll.insert(value: 1)
-ll.insert(value: 2)
-ll.insert(value: 3)
-ll.insert(value: 6)
-ll.insertInOrder(value: 4)
+
+
+
+let threeNode = Node(value: 3, next: nil)
+let twoNode = Node(value: 2, next: threeNode)
+let oneNode = Node(value: 1, next: twoNode)
+printList(head:oneNode)
+let myReversedList = reverseList(head: oneNode)
+printList(head: myReversedList) //needs to print out 3,2,1
+
+//ll.insert(value: 1)
+//ll.insert(value: 2)
+//ll.insert(value: 3)
+//ll.insert(value: 6)
+//ll.insertInOrder(value: 4)
 
 
 
 //ll.delete(value: 2)
 ll.displayListItems()
+
+
