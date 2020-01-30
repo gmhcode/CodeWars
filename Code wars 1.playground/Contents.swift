@@ -1,6 +1,6 @@
 import UIKit
 
-var str = "my name is mr. poo poo head"
+var str = "my name is mr. blah blah head"
 extension String {
     func toJadenCase() -> String {
     var convertedWords = ""
