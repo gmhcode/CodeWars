@@ -105,7 +105,7 @@ var str = "Hello, playground"
 class Node {
     var value : Int
     var next : Node?
-    
+
     init(value: Int, next: Node?) {
         self.value = value
         self.next = next
@@ -114,17 +114,17 @@ class Node {
 
 class LinkedList {
     var head : Node?
-    
-    
+
+
     func displayListItems() {
         var current = head
-        
+
         while current != nil {
             print(current?.value ?? "")
             current = current?.next
         }
     }
-    
+
     func insert(value: Int) {
         if head == nil {
             head = Node(value: value, next: nil)
@@ -132,13 +132,13 @@ class LinkedList {
         }
         var current = head
         while current?.next != nil {
-            
+
             current = current?.next
-            
+
         }
         current?.next = Node(value: value, next: nil)
     }
-    
+
     func delete(value: Int){
         if head == nil {return}
         if head?.next == nil {
@@ -149,17 +149,17 @@ class LinkedList {
         }
         var prev : Node?
         var current = head
-        
+
         while current != nil && current?.value != value {
             prev = current
             current = current?.next
         }
         prev?.next = current?.next
     }
-    
+
     func insertInOrder(value:Int){
         guard head != nil else { return }
-        
+
         if head != nil || head?.value ?? 1 >= value {
             let newNode = Node(value: value, next: head)
         }
@@ -168,10 +168,10 @@ class LinkedList {
             current = current?.next
         }
         current?.next = Node(value: value, next: current?.next)
-        
+
     }
-    
-    
+
+
 }
 
 func printList(head: Node?) {
@@ -188,13 +188,13 @@ func reverseList(head: Node?) -> Node? {
     var currentNode = head
     var prev: Node?
     var next: Node?
-    
+
     while currentNode != nil {
         next = currentNode?.next
         currentNode?.next = prev
         prev = currentNode
-        
-        
+
+
         currentNode = next
     }
     return prev
@@ -224,3 +224,98 @@ printList(head: myReversedList) //needs to print out 3,2,1
 ll.displayListItems()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//class Node {
+//
+//    var val: Int
+//
+//    var next: Node?
+//
+//    init(val: Int) {
+//        self.val = val
+//    }
+//
+//}
+//
+//class LinkedList {
+//
+//    var root: Node?
+//
+//    func insert(val: Int) {
+//        if self.root == nil {
+//            self.root = Node(val: val)
+//        } else {
+//            self.insert(node: &self.root!, val: val)
+//        }
+//    }
+//
+//    func insert(node: inout Node, val: Int) {
+//        // if val is greater than node
+//        if val > node.val {
+//            if node.next == nil {
+//                node.next = Node(val: val)
+//            } else {
+//                self.insert(node: &node.next!, val: val)
+//            }
+//        } else {
+//            // val is less than node, squeeze in node
+//            let newNode = Node(val: val)
+//
+//            // replace val
+//            newNode.next = node
+//            node = newNode
+//        }
+//    }
+//
+//    func merge(list: LinkedList) {
+//        var listNode = list.root
+//
+//        while listNode != nil {
+//            self.insert(val: listNode!.val)
+//            listNode = listNode!.next
+//        }
+//    }
+//
+//    func printData() {
+//        var node = self.root
+//
+//        while node != nil {
+//            print(node!.val)
+//            node = node!.next
+//        }
+//    }
+//}
+//
+//var list = LinkedList()
+//list.insert(val: 2)
+//list.insert(val: 4)
+//list.insert(val: 1)
+//list.insert(val: 2)
+//list.insert(val: 0)
+//list.printData()
+//print("List one")
+//var listTwo = LinkedList()
+//listTwo.insert(val: 3)
+//listTwo.insert(val: 6)
+//listTwo.insert(val: 1)
+//listTwo.insert(val: 0)
+//list.printData()
+//print("List two")
+//list.merge(list: listTwo)
+//list.printData()
