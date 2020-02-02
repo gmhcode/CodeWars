@@ -13,7 +13,7 @@ var str = "Hello, playground"
 //     25  6
 //
 //
-
+// string as input first unrepeating letter
 //Node that represents a value or operator in Abstract Syntax Tree
 
 class Node {
