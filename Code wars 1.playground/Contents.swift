@@ -13,6 +13,7 @@ extension String {
             
         if index != pocket.count - 1 {
             word = i.prefix(1).uppercased() + i.dropFirst() + " "
+            print(i.prefix(1))
         } else {
             word = i.prefix(1).uppercased() + i.dropFirst()
         }
