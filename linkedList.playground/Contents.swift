@@ -133,10 +133,10 @@ ll.insert(value: 3)
 ll.insert(value: 6)
 ll.insertInOrder(value: 4)
 
-printList(head: reverseList(head: ll.head))
+//printList(head: reverseList(head: ll.head))
 
 //ll.delete(value: 2)
 //ll.displayListItems()
-
+print(Date())
 
 
