@@ -2,11 +2,6 @@ package main
 
 import "strings"
 
-func main() {
-	short := FindShort("hello Ia am Greg")
-	println(short)
-}
-
 //FindShort - Finds the shortest word in a string and returns the count
 func FindShort(s string) int {
 	// your code
