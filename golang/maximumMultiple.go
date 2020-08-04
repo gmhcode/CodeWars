@@ -1,5 +1,6 @@
 package main
 
+// MaxMultiple - Given a Divisor and a Bound , Find the largest integer N
 func MaxMultiple(d, b int) int {
 	if b%d == 0 {
 		return b
@@ -9,15 +10,11 @@ func MaxMultiple(d, b int) int {
 	return MaxMultiple(d, newB)
 }
 
-func main() {
-	num := MaxMultiple(2, 7)
-	println("main Print", num)
-}
-
 //BEST
 // func MaxMultiple(d, b int) int {
 //     return b - b % d
 // }
+
 // Task
 // Given a Divisor and a Bound , Find the largest integer N , Such That ,
 
