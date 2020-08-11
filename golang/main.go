@@ -1,5 +1,6 @@
 package main
 
 func main() {
-	wave("hello")
+
+	println(BouncingBall(3, 0.66, 1.5))
 }
