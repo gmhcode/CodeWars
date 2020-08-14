@@ -29,27 +29,32 @@ func maxRot(n int64) int64 {
 
 //Best practices
 
-// func MaxRot(n int64) (max int64){
-//   max = n
-//   strn := strconv.FormatInt(n, 10)
+func MaxRot(n int64) (max int64) {
+	max = n
+	strn := strconv.FormatInt(n, 10)
 
-//   var left string
-//   var middle string
-//   var right string
-//   var currentNumber int64
+	var left string
+	var middle string
+	var right string
+	var currentNumber int64
 
-//   for index := range strn[:len(strn)-1] {
-//     left = strn[:index]
-//     middle = strn[index:index+1]
-//     right = strn[index+1:]
+	println("strn:  ", strn)
+	for index := range strn[:len(strn)-1] {
+		left = strn[:index]
+		middle = strn[index : index+1]
+		right = strn[index+1:]
+		println("left:  ", left)
+		println("middle:  ", middle)
+		println("right:  ", right)
+		strn = left + right + middle
 
-//     strn = left+right+middle
-
-//     currentNumber,_ = strconv.ParseInt(strn,10,64)
-//     if max < currentNumber {max = currentNumber}
-//     }
-//   return
-// }
+		currentNumber, _ = strconv.ParseInt(strn, 10, 64)
+		if max < currentNumber {
+			max = currentNumber
+		}
+	}
+	return
+}
 
 // Let us begin with an example:
 
