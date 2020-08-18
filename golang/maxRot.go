@@ -39,7 +39,9 @@ func MaxRot(n int64) (max int64) {
 	var currentNumber int64
 
 	println("strn:  ", strn)
+
 	for index := range strn[:len(strn)-1] {
+		println("index: ", index)
 		left = strn[:index]
 		middle = strn[index : index+1]
 		right = strn[index+1:]
