@@ -3,7 +3,7 @@ package main
 func main() {
 
 	// println(MaxRot(1234))
-	thing := twoToOne("xyaabbbccccdefww", "xxxxyyyyabklmopq")
+	thing := brandNameGenerator("dolphind")
 
 	println(thing)
 
