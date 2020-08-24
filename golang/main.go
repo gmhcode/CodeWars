@@ -3,7 +3,7 @@ package main
 func main() {
 
 	// println(MaxRot(1234))
-	thing := brandNameGenerator("dolphind")
+	thing := hasEnding("asdasdasda", "ddd")
 
 	println(thing)
 
