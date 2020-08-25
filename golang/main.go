@@ -3,7 +3,7 @@ package main
 func main() {
 
 	// println(MaxRot(1234))
-	thing := hasEnding("asdasdasda", "ddd")
+	thing := inviteMoreWomen([]int{1, -1, 1})
 
 	println(thing)
 
