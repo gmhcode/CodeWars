@@ -24,7 +24,6 @@ import (
 
 func main() {
 	fmt.Println(getLines(5))
-	// countSameNumber("111")
 
 }
 func getLines(num int) []string {
@@ -32,19 +31,16 @@ func getLines(num int) []string {
 	if num < 0 {
 		return []string{"-1"}
 	}
-	// fmt.Println("num ", num)
+
 	returningArray := make([]string, 1)
 	returningArray[0] = "1"
-	// fmt.Println(returningArray[0])
-	// fmt.Println(num)
 
 	for i := 1; i < num; i++ {
-		// fmt.Println("i-1", i-1)
+
 		currentNum := returningArray[i-1]
-		// fmt.Println("currentNum ", currentNum)
+
 		lookAndSayNum := countSameNumber(currentNum)
 		returningArray = append(returningArray, lookAndSayNum)
-		// fmt.Println("lookandsayMNum ", lookAndSayNum)
 	}
 
 	return returningArray
@@ -57,24 +53,26 @@ func countSameNumber(st string) string {
 	array := ""
 
 	for index, letter := range st {
-		// fmt.Println("index: ", index, "letter: ", string(letter))
+
 		if previousNumber != string(letter) {
+
 			array = array + strconv.Itoa(countOfPreviousNumber)
 			array += string(previousNumber)
-			// fmt.Println("prev number", string(previousNumber))
 			countOfPreviousNumber = 1
 			previousNumber = string(letter)
+
 		} else {
 			countOfPreviousNumber++
 		}
+
 		if index == len(st)-1 {
+
 			array += strconv.Itoa(countOfPreviousNumber)
 			array += string(previousNumber)
+
 		}
 
 	}
-	// println(wtf is going on)
-	// fmt.Println("going to print array")
-	// fmt.Println("array", array)
+
 	return array
 }
