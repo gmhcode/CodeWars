@@ -13,7 +13,7 @@ var str = "Hello, playground"
 
 func validParentheses(parens: String) -> Bool {
     guard !parens.isEmpty, parens.first != ")" else {return false}
-    
+
     var leftPointing = 0
 //        var rightPointing = 0
     for i in parens {
@@ -31,4 +31,3 @@ func validParentheses(parens: String) -> Bool {
     }
     return true
 }
-
