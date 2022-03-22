@@ -22,4 +22,6 @@ func quickSort(array: [Int]) -> [Int]{
     return quickSort(array: smallerElemetns) + [array[0]] + quickSort(array: greaterEqualElemetns)
 }
 
-print(quickSort(array: theArray))
+print(quickSort(array: theArray)
+
+)
